@@ -14,18 +14,18 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import RNFS from 'react-native-fs';
+// import RNFS from 'react-native-fs';
 
 const App: () => ReactNode = () => {
-  const [dir, setDir] = useState<null | {path: string}[]>(null);
-  useEffect(() => {
-    RNFS.readDir(RNFS.MainBundlePath).then((result) => {
-      console.log('GOT RESULT', result);
-      setDir(result);
-      // // stat the first file
-      // return Promise.all([RNFS.stat(result[0].path), result[0].path]);
-    });
-  }, []);
+  // const [dir, setDir] = useState<null | {path: string}[]>(null);
+  // useEffect(() => {
+  //   RNFS.readDir(RNFS.MainBundlePath).then((result) => {
+  //     console.log('GOT RESULT', result);
+  //     setDir(result);
+  //     // // stat the first file
+  //     // return Promise.all([RNFS.stat(result[0].path), result[0].path]);
+  //   });
+  // }, []);
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -41,7 +41,7 @@ const App: () => ReactNode = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Dir Count: {dir.map(i => i.path).join(',')}</Text>
+              {/* <Text style={styles.sectionTitle}>Dir Count: {dir.map(i => i.path).join(',')}</Text> */}
               <Text style={styles.sectionDescription}>
                 make two{' '}
                 <Text style={styles.highlight}>dents in the universe</Text>

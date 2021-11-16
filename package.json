@@ -12,7 +12,6 @@
   "dependencies": {
     "react": "16.13.1",
     "react-native": "0.64.3",
-    "react-native-fs": "^2.18.0",
     "react-native-macos": "^0.64.10"
   },
   "devDependencies": {
